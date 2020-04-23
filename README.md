@@ -20,6 +20,8 @@ Since there are a lot of types of CNNs, we focus on discussing the original vers
 
 A ConvNet is made up of Layers, input, and an output layer, as well as multiple hidden layers. Every Layer has a simple API: It transforms an input 3D volume to an output 3D volume with some differential function that may or may not have parameters.
 
+<img  src= "images_folder/CNN.png"  width="700" height= "200" >
+
 Figure 1. The architecture of LeNet-5, a Convolutional Neural Network. LeCun et al., 1998
 
 The hidden layers of a CNN typically consist of a series of convolutional layers that convolve with a multiplication. The activation function is commonly a RELU layer and is subsequently followed by additional convolutions such as pooling layers, fully connected layers, and normalization layers referred to as hidden layers because their inputs and outputs are masked by the activation function and final convolution.
@@ -36,6 +38,11 @@ Once your network has been trained you can pass in an image of a dog to it for e
 
 When our training accuracy is not high because our dataset is somehow small, we can use data augmentation to achieve better accuracy.
 Data augmentation is often used in order to improve generalization properties. Typically, random cropping of rescaled images together with random horizontal ﬂipping and random RGB color and brightness shifts are used.
+
+
+<link rel="stylesheet" type = "images_folder" href="style.css">
+<img  src= "images_folder/data_augmentation.jpeg"  width="800" height= "250" class="center" >
+
 
 
 Figure .3. Augmenting an image of a cat to some amount of scales.
@@ -62,17 +69,27 @@ Update Jupyterlab and launch the application. Under Notebook, click on ‘Python
 #### 4.3. Install the deep learning Software
 ##### 3.3.1. TensorFlow
 
-_TensorFlow Hub_ is a library for reusable machine learning modules.
-_TensorFlow.js_ allows machine learning to happen within the web browser.
+[_TensorFlow Hub_][2] is a library for reusable machine learning modules.
+[_TensorFlow.js_][3] allows machine learning to happen within the web browser.
 
-*  TensorFlow Lite for Microcontrollers
-*  TensorBoard in Jupyter Notebooks. Colab.
-*  TensorFlow 2.0 + Keras Crash Course. Colab.
-*  tf.keras (TensorFlow 2.0) for Researchers: Crash Course. Colab.
-*  TensorFlow Tutorials
-*  Exploring helpful uses for BERT in your browser with TensorFlow.js.
-*  TensorFlow 2.0: basic ops, gradients, data preprocessing and augmentation, training and saving. Colab
+*  [TensorFlow Lite][4] for Microcontrollers
+*  [TensorBoard][5] in Jupyter Notebooks. [Colab][6].
+*  TensorFlow 2.0 + Keras Crash Course. [Colab][7].
+*  tf.keras (TensorFlow 2.0) for Researchers: Crash Course. [Colab][8].
+*  [TensorFlow Tutorials][9].
+*  TensorFlow 2.0: basic ops, gradients, data preprocessing and augmentation, training and saving. [Colab][10]
 
 
 
 [1]: https://www.kaggle.com/c/dogs-vs-cats/data
+[2]: https://www.tensorflow.org/hub
+[3]: https://www.tensorflow.org/js/
+[4]: https://www.tensorflow.org/lite/microcontrollers
+[5]: https://www.tensorflow.org/tensorboard/tensorboard_in_notebooks
+[6]: https://colab.research.google.com/github/tensorflow/tensorboard/blob/master/docs/tensorboard_in_%20notebooks.ipynb
+[7]: https://colab.research.google.com/drive/1UCJt8EYjlzCs1H1d1X0iDGYJsHKwu-NO
+[8]: https://colab.research.google.com/drive/14CvUNTaX1OFHDfaKaaZzrBsvMfhCOHIR
+[9]: https://www.tensorflow.org/tutorials
+[10]: https://colab.research.google.com/github/zaidalyafeai/Notebooks/blob/master/TF_2_0.ipynb
+
+
