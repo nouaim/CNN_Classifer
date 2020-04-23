@@ -5,16 +5,16 @@
 With that being said, we have now to choose which category classes we want our model to classify. Let’s take for instance our categories as images of dogs and cats. The process of implementing this image classifier is described as follows:
 
 
-# 1.Data preparation process
+### 1.Data preparation process
 
 
-Our input is a training dataset that consists of N images, each labeled with one of K different classes. To organize the labels of each of our images, we need to understand one specific aspect called the ground truth
-All we have to do in this step is to initializing training and validation data, keeping them in different folders.
-To collect the images we can use our own images, or we can download an amount from the internet, but the most convenient way is to use an opensource dataset, for our example, we picked arround 800 images from this opensource dataset https://www.kaggle.com/c/dogs-vs-cats/data
+Our input is a training dataset that consists of N images, each labeled with one of K different classes. 
+All we have to do in this step is initializing training and validation data, keeping them in two different folders.
+To collect the images we can use our own images, or we can download an amount from the internet, the most convenient way is to use an opensource dataset, for our example, we picked arround 800 images from this opensource dataset [Kaggle dogs-vs-cats][1] 
 
 
-# 2. Convolutional neural network model
-A convolutional neural network can be called a CNN, or a ConNnet.
+### 2. Convolutional neural network model
+A _convolutional neural network_ can be called a CNN, or a ConNnet.
 After preparing our data, we want to feed it to our neural network for training, so we want to understand what happens inside the neural network, namely in its architecture.
 Since there are a lot of types of CNNs, we focus on discussing the original version of CNNs that is proposed by Yann LeCan in 1998.
 
@@ -25,14 +25,14 @@ Figure 1. The architecture of LeNet-5, a Convolutional Neural Network. LeCun et 
 The hidden layers of a CNN typically consist of a series of convolutional layers that convolve with a multiplication. The activation function is commonly a RELU layer and is subsequently followed by additional convolutions such as pooling layers, fully connected layers, and normalization layers referred to as hidden layers because their inputs and outputs are masked by the activation function and final convolution.
 
 
-# 3. Training
+### 3. Training
 
 The fully connected layer uses a classifier in the output layer. The classifier is usually a softmax activation function.
 Everything is trained through forward- and backward propagation through many, many epochs. We wind up with a very well defined neural network where all the weights and features are trained.
 Once your network has been trained you can pass in an image of a dog to it for example and you can see, that you have a 95% probability that your image is a dog and a 5% probability that your image is a cat.
 
 
-# 3.1. Data Augmentation
+#### 3.1. Data Augmentation
 
 When our training accuracy is not high because our dataset is somehow small, we can use data augmentation to achieve better accuracy.
 Data augmentation is often used in order to improve generalization properties. Typically, random cropping of rescaled images together with random horizontal ﬂipping and random RGB color and brightness shifts are used.
@@ -40,37 +40,39 @@ Data augmentation is often used in order to improve generalization properties. T
 
 Figure .3. Augmenting an image of a cat to some amount of scales.
 
-# 3.2. Transfer learning
+#### 3.2. Transfer learning
 
 Instead of data augmentation, a common and highly effective approach to deep learning on small image datasets is to use a pre-trained network. A pre-trained network is a saved network that was previously trained on a large dataset. The idea is to feed the weights of this pre-trained model to our neural network, this will end up making us achieve higher accuracy.
 
-# 4. Ressources
-# 4.1. On the Cloud
+### 4. Ressources
+#### 4.1. On the Cloud
+
 Colab. Practice Immediately 8 . Labs 9: Introduction to Deep Learning (MIT 6.S191)
 Free GPU, compute via Colab https://colab.research.google.com/notebooks/welcome.ipynb.
 Colab can open notebooks directly from GitHub by simply replacing "http://github.com" with
 "http://colab.research.google.com/github/ " in the notebook URL.
 Colab Pro https://colab.research.google.com/signup.
 
-# 2.2. On a Local Machine
-JupyterLab is an interactive development environment for working with notebooks, code and data 10.
+#### 4.2. On a Local Machine
+
+_JupyterLab_ is an interactive development environment for working with notebooks, code and data 10.
 Install Anaconda and launch ‘Anaconda Navigator’
 Update Jupyterlab and launch the application. Under Notebook, click on ‘Python 3’
 
-# 3.3. Install the deep learning Software
-# 3.3.1. TensorFlow
+#### 4.3. Install the deep learning Software
+##### 3.3.1. TensorFlow
 
-TensorFlow Hub is a library for reusable machine learning modules.
-TensorFlow.js allows machine learning to happen within the web browser.
+_TensorFlow Hub_ is a library for reusable machine learning modules.
+_TensorFlow.js_ allows machine learning to happen within the web browser.
 
-• TensorFlow Lite for Microcontrollers
-• TensorBoard in Jupyter Notebooks. Colab.
-• TensorFlow 2.0 + Keras Crash Course. Colab.
-• tf.keras (TensorFlow 2.0) for Researchers: Crash Course. Colab.
-• TensorFlow Tutorials
-• Exploring helpful uses for BERT in your browser with TensorFlow.js.
-• TensorFlow 2.0: basic ops, gradients, data preprocessing and augmentation, training and saving. Colab
-
-
+*  TensorFlow Lite for Microcontrollers
+*  TensorBoard in Jupyter Notebooks. Colab.
+*  TensorFlow 2.0 + Keras Crash Course. Colab.
+*  tf.keras (TensorFlow 2.0) for Researchers: Crash Course. Colab.
+*  TensorFlow Tutorials
+*  Exploring helpful uses for BERT in your browser with TensorFlow.js.
+*  TensorFlow 2.0: basic ops, gradients, data preprocessing and augmentation, training and saving. Colab
 
 
+
+[1]: https://www.kaggle.com/c/dogs-vs-cats/data
