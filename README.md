@@ -14,7 +14,7 @@ To collect the images we can use our own images, or we can download an amount fr
 
 
 ### 2. Convolutional neural network model
-A _convolutional neural network_ can be called a CNN, or a ConNnet.
+A _convolutional neural network_ called a CNN, also known as a ConNnet.
 After preparing our data, we want to feed it to our neural network for training, so we want to understand what happens inside the neural network, namely in its architecture.
 Since there are a lot of types of CNNs, we focus on discussing the original version of CNNs that is proposed by Yann LeCan in 1998.
 
