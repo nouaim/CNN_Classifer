@@ -49,7 +49,7 @@ Figure .3. Augmenting an image of a cat to some amount of scales.
 
 #### 3.2. Transfer learning
 
-Instead of data augmentation, a common and highly effective approach to deep learning on small image datasets is to use a pre-trained network. A pre-trained network is a saved network that was previously trained on a large dataset. The idea is to feed the weights of this pre-trained model to our neural network, this will end up making us achieve higher accuracy.
+Instead of data augmentation, a common and highly effective approach to deep learning on small image datasets is to use a pre-trained network. A pre-trained network is a saved network that was previously trained on a large dataset. The idea is to feed the weights of this pre-trained model to our neural network, this will end up achieving higher accuracy.
 
 ### 4. Ressources
 #### 4.1. On the Cloud
